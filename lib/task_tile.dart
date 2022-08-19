@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TaskTile extends StatefulWidget {
-  @override
-  State<TaskTile> createState() => _TaskTileState();
-}
+class TaskTile extends StatelessWidget {
+  final bool? isChecked;
+  final String? tastTitle;
 
-class _TaskTileState extends State<TaskTile> {
-  bool? isChecked = false;
+  TaskTile({this.isChecked, this.tastTitle});
 
   @override
   Widget build(BuildContext context) {
     return CheckboxListTile(
       value: isChecked,
-      onChanged: (newValue) {
-        setState(() {
-          isChecked = newValue;
-        });
-      },
+      onChanged: (newValue) {},
       title: Text(
         "Placeholder 1",
         style: TextStyle(
@@ -27,3 +21,7 @@ class _TaskTileState extends State<TaskTile> {
     );
   }
 }
+      
+// setState(() {
+ //         isChecked = newValue;
+   //     });
