@@ -2,6 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatelessWidget {
+  late String newTask; //null safety in dart is annoying me
+  final Function addTaskCallback;
+
+  AddTaskScreen(this.addTaskCallback);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +32,9 @@ class AddTaskScreen extends StatelessWidget {
                           color: Colors.lightBlueAccent, width: 15.0))),
               autofocus: true,
               textAlign: TextAlign.center,
-              onChanged: null,
+              onChanged: (value) {
+                newTask = value;
+              },
             ),
             SizedBox(
               width: 250.0,
@@ -36,7 +43,9 @@ class AddTaskScreen extends StatelessWidget {
                     backgroundColor:
                         MaterialStateProperty.all(Colors.lightBlueAccent),
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    addTaskCallback(newTask);
+                  },
                   child: Text(
                     'Add',
                     style: TextStyle(color: Colors.white, fontSize: 20.0),

@@ -74,7 +74,13 @@ class _TasksScreenState extends State<TasksScreen> {
             showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,
-                builder: (context) => SafeArea(child: AddTaskScreen()));
+                builder: (context) =>
+                    SafeArea(child: AddTaskScreen((newTaskTitle) {
+                      setState(() {
+                        tasks.add(Task(taskText: newTaskTitle));
+                      });
+                      Navigator.pop(context);
+                    })));
           },
           backgroundColor: Colors.lightBlueAccent,
           child: Icon(Icons.add)),
