@@ -9,11 +9,7 @@ class TasksScreen extends StatefulWidget {
 }
 
 class _TasksScreenState extends State<TasksScreen> {
-  List<Task> tasks = [
-    Task(taskText: "practice coding"),
-    Task(taskText: "Apply for jobs"),
-    Task(taskText: "Watch youtube")
-  ];
+  
 
   int numTasks = 0;
 
