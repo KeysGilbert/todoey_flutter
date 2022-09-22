@@ -6,10 +6,7 @@ import 'add_task_screen.dart';
 import 'package:todoey_flutter/task.dart';
 import 'package:todoey_flutter/task_data.dart';
 
-
 class TasksScreen extends StatelessWidget {
-  
-
   //int numTasks = 0;
 
   @override
@@ -71,9 +68,8 @@ class TasksScreen extends StatelessWidget {
                 isScrollControlled: true,
                 builder: (context) =>
                     SafeArea(child: AddTaskScreen((newTaskTitle) {
-                      setState(() {
-                        Provider.of<TaskData>(context).tasks.add(Task(taskText: newTaskTitle));
-                      });
+                      Provider.of<TaskData>(context).addTask(newTaskTitle);
+
                       Navigator.pop(context);
                     })));
           },
