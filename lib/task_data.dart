@@ -8,4 +8,6 @@ class TaskData extends ChangeNotifier {
     Task(taskText: "Apply for jobs"),
     Task(taskText: "Watch youtube")
   ];
+
+  int get taskCount => tasks.length;
 }

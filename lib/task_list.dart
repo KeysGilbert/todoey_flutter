@@ -6,11 +6,11 @@ import 'task_data.dart';
 
 
 class TaskList extends StatelessWidget {
-  
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: Provider.of<TaskData>(context).tasks.length,
+        itemCount: Provider.of<TaskData>(context).taskCount,
         itemBuilder: ((context, index) {
           return TaskTile(
             taskTitle: Provider.of<TaskData>(context).tasks[index].taskText,
