@@ -68,7 +68,7 @@ class TasksScreen extends StatelessWidget {
                 isScrollControlled: true,
                 builder: (context) =>
                     SafeArea(child: AddTaskScreen((newTaskTitle) {
-                      Provider.of<TaskData>(context).addTask(newTaskTitle);
+                      Provider.of<TaskData>(context, listen: false).addTask(newTaskTitle); //listen must be false for adding to work
 
                       Navigator.pop(context);
                     })));
