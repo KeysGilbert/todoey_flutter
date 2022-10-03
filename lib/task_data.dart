@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:todoey_flutter/task.dart';
 import 'dart:collection';
+import 'package:flutter/material.dart';
 
 class TaskData extends ChangeNotifier {
   List<Task> _tasks = [
@@ -20,6 +20,11 @@ class TaskData extends ChangeNotifier {
 
   void crossOutTask(Task task) {
     task.finish();
+    notifyListeners();
+  }
+
+  void removeTask(int index) {
+    _tasks.removeAt(index);
     notifyListeners();
   }
 }

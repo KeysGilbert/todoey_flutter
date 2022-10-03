@@ -7,7 +7,6 @@ import 'task_data.dart';
 class TaskList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     //obtain Provider type fromm ancestor and pass to builder
     return Consumer<TaskData>(builder: (context, taskData, child) {
       return ListView.builder(
@@ -19,6 +18,9 @@ class TaskList extends StatelessWidget {
               checkboxCallback: (checkboxState) {
                 //taskData.crossOutTask(taskData.taskInfo[index]);
                 taskData.crossOutTask(taskData.taskInfo[index]);
+              },
+              longPress: () {
+                taskData.removeTask(index);
               },
             );
           }));
