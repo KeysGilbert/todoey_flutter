@@ -4,10 +4,12 @@ WHAT IS IT?
 
 A To-Do list app!
 
+
 KEY FEATURES
 * Add tasks to the homepage
 * Mark task as completed
 * Press and hold a task to delete it from list
+
 
 HOW TO USE?
 Simply clone this repository
