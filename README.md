@@ -1,16 +1,20 @@
 # todoey_flutter
 
-A new Flutter project.
+WHAT IS IT?
+A To-Do list app!
 
-## Getting Started
+KEY FEATURES
+* Add tasks to the homepage
+* Mark task as completed
+* Press and hold a task to delete it from list
 
-This project is a starting point for a Flutter application.
+HOW TO USE?
+Simply clone this repository
+$ git clone https://github.com/KeysGilbert/todoey_flutter.git
 
-A few resources to get you started if this is your first Flutter project:
+Run a pub get just for good meausure
+$ flutter pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run the app (make sure your physical device is connected)
+$ flutter run
+ 
